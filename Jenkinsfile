@@ -11,8 +11,4 @@ node {
     pip install -r requirements.txt
     """
 	}
-	sh """
-	. .env/bin/activate
-	pip install -r requirements/test.txt
-	"""
 }
