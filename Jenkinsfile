@@ -1,5 +1,11 @@
 pipeline {
     agent any
+    properties([
+        parameters([
+            choices: ['int\nstg\nprod\nper  f']
+            echo "will deploy to ${DEPLOY_ENV}"
+        ])
+    ])
     stages{
         stage('Build'){
             steps{
